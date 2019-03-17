@@ -36,7 +36,7 @@ setup(
         'Intended Audience :: Developers',
 
         # Pick your license as you wish
-        'License :: MIT',
+        'License :: OSI Approved :: MIT License',
 
         # Support platforms
         'Operating System :: Microsoft :: Windows',
