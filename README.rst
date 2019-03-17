@@ -17,9 +17,9 @@ Usage
 
 Install it::
 
-  pip install IMessageFilter
+  pip install imessagefilter
 
-Import `CMessageFilter` from `IMessageFilter`
+Import `CMessageFilter` from `imessagefilter`
 
 Call static method `register` at the beginning of automation
 
@@ -30,7 +30,7 @@ Here it's an example:
 .. code:: python
 
     from comtypes.client import CreateObject
-    from IMessageFilter import CMessageFilter
+    from imessagefilter import CMessageFilter
 
     def iter_excel_sheets(filename):
         CMessageFilter.register()

@@ -4,14 +4,14 @@ try:
 except ImportError:
     from distutils.core import setup
 
-__version__ = '0.1'
+__version__ = '0.2.1'
 
 here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.rst')) as f:
     long_description = f.read()
 
 setup(
-    name='IMessageFilter',
+    name='imessagefilter',
 
     # Versions should comply with PEP 440:
     # https://www.python.org/dev/peps/pep-0440/
@@ -19,7 +19,7 @@ setup(
     description='A python package implements interface IMessageFilter for COM',
     long_description=long_description,
 
-    url='https://github.com/jondy/IMessageFilter',
+    url='https://github.com/jondy/imessagefilter',
     author='Jondy Zhao',
     author_email='jondy.zhao@gmail.com',
 
@@ -53,10 +53,10 @@ setup(
     # Note that this is a string of words separated by whitespace, not a list.
     keywords='COM IMessageFilter',
 
-    packages=['IMessageFilter'],
-    package_dir={'IMessageFilter': '.'},
+    packages=['imessagefilter'],
+    package_dir={'imessagefilter': '.'},
     package_data={
-        'IMessageFilter': [
+        'imessagefilter': [
             'README.md', 'LICENSE', 'msgfilter.c', 'msgfilter.dll'
         ],
     },
