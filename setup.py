@@ -4,14 +4,11 @@ try:
 except ImportError:
     from distutils.core import setup
 
-__version__ = '0.1.2'
+__version__ = '0.1.3'
 
 here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.rst')) as f:
     long_description = f.read()
-
-with open(path.join(here, 'LICENSE')) as f:
-    license_info = f.read()
 
 
 setup(
@@ -27,7 +24,6 @@ setup(
     author='Jondy Zhao',
     author_email='jondy.zhao@gmail.com',
 
-    license=license_info,
     platforms=['Windows'],
 
     # For a list of valid classifiers, see

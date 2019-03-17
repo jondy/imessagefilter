@@ -90,6 +90,11 @@ Here it's an exmaple:
 Change Logs
 -----------
 
+0.1.3
+~~~~~
+* Fix no long description in package information
+
 0.1.2
 ~~~~~
 * Fix typos
+  
