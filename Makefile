@@ -12,4 +12,4 @@ build: msgfilter.c
 	@echo 'Build msgfilter.dll OK'
 
 clean:
-	rm -rf *.pyc *.pyo __pycache__ build PyMessageFilter.egg-info
+	rm -rf *.pyc *.pyo __pycache__ build imessagefilter.egg-info
