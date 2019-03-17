@@ -46,6 +46,9 @@ By mingw32 in cygwin `i686-pc-mingw32-gcc -shared -o msgfilter.dll msgfilter.c -
 There are 2 export functions, they can be used in any c file:
 
 ```c
+#include <stdio.h>
+#include <objbase.h>
+
 extern void register_message_filter();
 extern void revoke_message_filter();
 

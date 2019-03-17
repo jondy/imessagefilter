@@ -4,7 +4,7 @@ try:
 except ImportError:
     from distutils.core import setup
 
-__version__ = '0.1'
+__version__ = '0.1a2'
 
 here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.md')) as f:
