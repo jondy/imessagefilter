@@ -26,10 +26,10 @@ Call static method `revoke` at the end of work
 Here it's an example:
 
 .. code:: python
-          
+
     from comtypes.client import CreateObject
     from PyMessageFilter import CMessageFilter
-    
+
     def iter_excel_sheets(filename):
         CMessageFilter.register()
         aobj = CreateObject('Excel.Application', dynamic=True)
@@ -37,7 +37,7 @@ Here it's an example:
         for sheet in aobj.ActiveWorkbook.Worksheets:
             print('Processing %s' % sheet.Name)
         CMessageFilter.revoke()
-    
+
 
 .. note::
 
@@ -59,22 +59,23 @@ There are 2 export functions, they can be used in any c file.
 Here it's an exmaple:
 
 .. code:: c
+
     #include <stdio.h>
     #include <objbase.h>
-    
+
     extern void register_message_filter();
     extern void revoke_message_filter();
-    
+
     int main(int argc, char* argv[])
     {
       HRESULT ret;
       ret = CoInitializeEx(0, COINIT_APARTMENTTHREADED);
       register_message_filter();
-    
+
       // do something for automation
-    
+
       revoke_message_filter();
       CoUninitialize();
-    
+
       return 0;
     }
