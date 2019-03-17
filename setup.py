@@ -4,10 +4,10 @@ try:
 except ImportError:
     from distutils.core import setup
 
-__version__ = '0.1a2'
+__version__ = '0.2'
 
 here = path.abspath(path.dirname(__file__))
-with open(path.join(here, 'README.md')) as f:
+with open(path.join(here, 'README.rst')) as f:
     long_description = f.read()
 
 setup(
