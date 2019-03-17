@@ -8,16 +8,16 @@ class CMessageFilter(object):
 
     msgfilter = None
 
-    @staticmethod
+    @classmethod
     def register(cls):
         if cls.msgfilter is None:
             filename = os.path.join(os.path.dirname(__file__), 'msgfilter.dll')
             cls.msgfilter = windll.LoadLibrary(os.path.normpath(filename))
         cls.msgfilter.register_message_filter()
 
-    @staticmethod
+    @classmethod
     def revoke(cls):
-        if cls.msgfiler:
+        if cls.msgfilter:
             cls.msgfilter.revoke_message_filter()
 
 

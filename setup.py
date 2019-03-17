@@ -4,11 +4,15 @@ try:
 except ImportError:
     from distutils.core import setup
 
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 
 here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.rst')) as f:
     long_description = f.read()
+
+with open(path.join(here, 'LICENSE')) as f:
+    license_info = f.read()
+
 
 setup(
     name='imessagefilter',
@@ -22,6 +26,9 @@ setup(
     url='https://github.com/jondy/imessagefilter',
     author='Jondy Zhao',
     author_email='jondy.zhao@gmail.com',
+
+    license=license_info,
+    platforms=['Windows'],
 
     # For a list of valid classifiers, see
     # https://pypi.python.org/pypi?%3Aaction=list_classifiers

@@ -86,3 +86,10 @@ Here it's an exmaple:
 
       return 0;
     }
+
+Change Logs
+-----------
+
+0.1.2
+~~~~~
+* Fix typos
