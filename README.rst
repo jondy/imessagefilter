@@ -1,5 +1,5 @@
 =================
- PyMessageFilter
+ IMessageFilter
 =================
 
 A python package implements interface IMessageFilter for COM.
@@ -15,9 +15,11 @@ But it's written by C#, this package offers both C and Python versions.
 Usage
 -----
 
-Install it by `pip install PyMessageFilter`
+Install it::
 
-Import `CMessageFilter` from `PyMessageFilter`
+  pip install IMessageFilter
+
+Import `CMessageFilter` from `IMessageFilter`
 
 Call static method `register` at the beginning of automation
 
@@ -28,7 +30,7 @@ Here it's an example:
 .. code:: python
 
     from comtypes.client import CreateObject
-    from PyMessageFilter import CMessageFilter
+    from IMessageFilter import CMessageFilter
 
     def iter_excel_sheets(filename):
         CMessageFilter.register()
@@ -43,16 +45,21 @@ Here it's an example:
 
    The interface `IMessageFilter` only works in single-threaded
    apartments, it will not be called in the multithreaded
-   apartments. Refer to
+   apartments.
 
+   Refer to
    https://docs.microsoft.com/en-us/windows/desktop/com/choosing-the-threading-model
 
 Build `msgfilter.dll`
 ---------------------
 
-By visual studio command line `cl /LD msgfilter.c ole32.lib`
+By visual studio command line::
 
-By mingw32 in cygwin `i686-pc-mingw32-gcc -shared -o msgfilter.dll msgfilter.c -lole32 -luuid`
+    cl /LD msgfilter.c ole32.lib
+
+By mingw32 in cygwin::
+
+    i686-pc-mingw32-gcc -shared -o msgfilter.dll msgfilter.c -lole32 -luuid
 
 There are 2 export functions, they can be used in any c file.
 
