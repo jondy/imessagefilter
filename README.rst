@@ -90,6 +90,10 @@ Here it's an exmaple:
 Change Logs
 -----------
 
+0.2.1
+~~~~~
+* Search msgfilter.dll in the current path first
+
 0.1.3
 ~~~~~
 * Fix no long description in package information

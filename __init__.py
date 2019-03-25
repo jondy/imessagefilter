@@ -11,7 +11,9 @@ class CMessageFilter(object):
     @classmethod
     def register(cls):
         if cls.msgfilter is None:
-            filename = os.path.join(os.path.dirname(__file__), 'msgfilter.dll')
+            filename = 'msgfilter.dll'
+            if not os.path.exists(filename):
+                filename = os.path.join(os.path.dirname(__file__), filename)
             cls.msgfilter = windll.LoadLibrary(os.path.normpath(filename))
         cls.msgfilter.register_message_filter()
 
