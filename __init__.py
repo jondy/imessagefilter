@@ -25,6 +25,6 @@ class CMessageFilter(object):
 
 if __name__ == '__main__':
     windll.ole32.CoInitialize(0)
-    CMessageFilter.Register()
-    CMessageFilter.Revoke()
+    CMessageFilter.register()
+    CMessageFilter.revoke()
     windll.ole32.CoUninitialize()
