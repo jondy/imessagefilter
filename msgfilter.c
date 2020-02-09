@@ -8,6 +8,11 @@
 #include <objbase.h>
 #include <objidl.h>
 
+#if defined (_MSC_VER)
+#define API _declspec(dllexport)
+#else
+#define API
+#endif
 
 static IMessageFilterVtbl imp_filter;
 static IMessageFilter newFilter = { &imp_filter };
@@ -89,7 +94,7 @@ static STDMETHODIMP_(DWORD) MessageFilter_MessagePending(IMessageFilter * This,
 }
 
 // Start the filter.
-void register_message_filter()
+void API register_message_filter()
 {
   imp_filter.QueryInterface = MessageFilter_QueryInterface;
   imp_filter.AddRef = MessageFilter_AddRef;
@@ -103,7 +108,7 @@ void register_message_filter()
 }
 
 // Done with the filter, close it.
-void revoke_message_filter()
+void API revoke_message_filter()
 {
   CoRegisterMessageFilter(NULL, lpOldFilter);
 }
